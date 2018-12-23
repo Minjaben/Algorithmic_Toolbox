@@ -1,0 +1,4 @@
+#Uses python3
+index1 = 1
+n = int(input())
+a = [int(x) for x in input().split()]
