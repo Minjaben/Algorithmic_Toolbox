@@ -9,20 +9,21 @@ def binary_search(a, x, left, right):
     if (left > right):
         return (-1)
     #print (a[left], " is the value for a[left]")
-    mid = int(left + (right-left)/2)
+
+    pivot = int(left + (right-left)/2)
+    pivotval = a[pivot]
     #print (mid)
-    if x == a[mid]:
+    if x == pivotval:
         #print (mid)
-        return mid
-    elif x < a[mid]:
-        right = (mid - 1)
-        return binary_search(a, x, left, right)
+        return pivot
+    elif x < pivotval:
+        right = (pivot - 1)
         print("less than mid")
     else:
         #print (a[mid+1])
-        left = (mid + 1)
-        return binary_search(a, x, left, right)
+        left = (pivot + 1)
         print("more than mid")
+    return binary_search(a, x, left, right)
     # write your code here
 
 def linear_search(a, x):
